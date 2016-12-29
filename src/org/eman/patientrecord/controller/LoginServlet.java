@@ -40,7 +40,6 @@ public class LoginServlet extends HttpServlet {
 		}else{
 			request.setAttribute("error", true);
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
-			//response.sendRedirect(request.getContextPath() + "/login.jsp");
 			return;
 		}
 		
@@ -51,9 +50,7 @@ public class LoginServlet extends HttpServlet {
 			context.setAttribute("workups", workups);
 		}
 		
-		String sessID = session.getId();
-		String view = response.encodeURL("/Home;jsessionid=" + sessID);
-//		request.getRequestDispatcher(view).forward(request, response);
+		String view = response.encodeURL("/Home");
 		response.sendRedirect(request.getContextPath() + view);
 		return;
 	}
