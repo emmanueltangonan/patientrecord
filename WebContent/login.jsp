@@ -24,7 +24,7 @@
 		<i class="circular doctor icon"></i>
 		<div class="content">
 		    Patient Records System
-		    <div class="sub header">Organize your patient records</div>
+		    <div class="sub header">Organize your patient records <br/><b>(Simple CRUD App using Java Servlet and JSP, running on Tomcat Server and MySQL Database)</b></div>
 		 </div>
 	</h2>
 </div><br/>
@@ -32,6 +32,7 @@
 <div class="ui one column center aligned grid">
   <div class="column four wide form-holder">
     <h2 class="center aligned header form-head">Sign in</h2>
+    <p>System-provided username and password. <br/> Use default account (user = pepe, password = 1234)</p>
     <div class="ui form">
     
     <c:if test="${requestScope.error == true}">
