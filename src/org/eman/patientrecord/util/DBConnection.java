@@ -1,39 +1,32 @@
 package org.eman.patientrecord.util;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
-
 public class DBConnection {
-	private static final String DATASOURCE_CONTEXT = "java:comp/env/jdbc/patientDB";
-	
+
 	public static Connection getDBConnection(){
-		Connection conn = null;
-		
+		URI dbUri = null;
 		try {
-			Context initContext = new InitialContext();
-			DataSource ds = (DataSource) initContext.lookup(DATASOURCE_CONTEXT);
-			if(ds != null) {
-				conn = ds.getConnection();
-			}
-		} catch (NamingException | SQLException ex) {
-			ex.printStackTrace();
+			dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+
+		String username = dbUri.getUserInfo().split(":")[0];
+		String password = dbUri.getUserInfo().split(":")[1];
+		String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
+
+		try {
+			return DriverManager.getConnection(dbUrl, username, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
 		}
 		
-		return conn;
-	}
-	
-	public static void main(String[] args){
-		Connection conn = getDBConnection();
-		if(conn != null){
-			System.out.println("Connection successful...");
-		}else{
-			System.out.println("Error in connecting...");
-		}
 	}
 	
 }
