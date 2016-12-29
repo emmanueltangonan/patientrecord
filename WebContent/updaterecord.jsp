@@ -29,7 +29,7 @@
 		  <i class="home icon"></i>
 		    Home
 		  </a>
-		  <a class="item" href="<c:url value="/InitializeAdd"/>" >
+		  <a class="item" href="<c:url value="/Initialize"/>" >
 		  	<i class="add user icon"></i>
 		    New Patient Record
 		  </a>
@@ -115,7 +115,7 @@
 		  </div>
 		  <div class="right four wide column">
 		  	<div class="ui segment">
-	  			<img class="ui centered medium image" src="http://sugartin.info/wp-content/uploads/2013/11/logo.png">
+	  			<img class="ui centered medium image" src="http://www.iconshock.com/img_vista/WINDOWS8/medical/jpg/patient_icon.jpg">
 			</div>
 		  </div>
 		  </div>

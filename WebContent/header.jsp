@@ -16,10 +16,10 @@
 <title>Add Patient Record</title>
 </head>
 <body>
-<div class="ui container">
+<div id="main-header" class="">
 	<div class="ui raised segment">
 		
-		<div class="ui grid">
+		<div id="header-div" class="ui grid">
 		<div class="three column row">
 		    <div class="left floated eight wide column">
 				<h1>
@@ -35,13 +35,13 @@
 		   
 		     <div class="right floated five wide column">
 			     <div class="right floated four wide column top-options">
-			     	<a style="cursor:pointer" href="<c:url value="/LogoutServlet"/>">
+			     	<a class="right-menu" style="cursor:pointer" href="<c:url value="/LogoutServlet"/>">
 			    	Sign out 
 			    	</a> |
-			    	<a href="#">
+			    	<a class="right-menu" href="http://www.google.com">
 			    	Help
 			    	</a> |
-			    	<a href="#">
+			    	<a class="right-menu" href="#" onclick="return alert('Developed by Emmanuel Tangonan');">
 			    	About
 			    	</a>
 			     </div>
@@ -49,7 +49,6 @@
 		    	
 				<h4 class="ui right floated header signed_h2">
 				Signed in as:
-				  <!--img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQPJM4YvjzSCCDoQdLrpE1OP4CjT6kr8P-HMy8FfTjfhMgLpjPE03WXtw" class="ui circular image"-->
 				  <i class="doctor icon"></i>
 				  ${sessionScope.doc_name}
 				</h4>

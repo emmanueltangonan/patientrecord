@@ -21,10 +21,7 @@
 
 <div class="ui container">
 	<div id="bottom-container" class="ui raised segment">
-	<h1 class="ui center aligned dividing header">
-	<i class="add user icon"></i>
-	Create Patient Record
-	</h1>
+	
 	<div class="ui pointing menu">
 		  <a class="item" href="<c:url value="/Home"/>">
 		  <i class="home icon"></i>
@@ -37,6 +34,12 @@
 		  <div class="right menu">
 		  </div>
 	</div>
+	
+	<h1 class="ui center aligned dividing header">
+	<i class="add user icon"></i>
+	Create Patient Record
+	</h1>
+	
 	<div class="ui segment">
 		<c:choose>
 		<c:when test="${empty requestScope.addMsg}">
@@ -120,7 +123,7 @@
 		  </div>
 		  <div class="right four wide column">
 		  	<div class="ui segment">
-	  			<img class="ui centered small image" src="http://sugartin.info/wp-content/uploads/2013/11/logo.png">
+	  			<img class="ui centered small image" src="http://www.iconshock.com/img_vista/WINDOWS8/medical/jpg/patient_icon.jpg">
 			</div>
 			
 		  </div>

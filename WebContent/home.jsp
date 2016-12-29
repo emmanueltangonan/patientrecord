@@ -23,10 +23,7 @@
 
 <div class="ui container">
 		<div id="patients-container" class="ui raised segment">
-		<h1 class="ui center aligned dividing header">
-		<i class="users icon"></i>
-		All Patient Records
-		</h1>
+		
 		<div class="ui pointing menu">
 		  <a class="${not empty requestScope.patientList ? '' : 'active'} item" 
 		  href="<c:url value="/Home" />">
@@ -49,6 +46,11 @@
 		    </div>
 		  </div>
 		</div>
+		
+		<h1 class="ui center aligned dividing header">
+		<i class="users icon"></i>
+		All Patient Records
+		</h1>
 		
 		<div class="ui segment">
 			

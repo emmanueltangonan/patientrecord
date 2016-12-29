@@ -2,6 +2,13 @@
 html{
 
 }
+#header-div{
+	background: #f0f0f0;
+}
+#main-header{
+	width: 100%;
+	margin-bottom: 40px;
+}
 .login-body {
     padding: 0;
     margin: 0;
@@ -94,7 +101,7 @@ div.content a{
 	text-align: right;
 }
 div.top-options a{
-	margin: 20px;
+	margin: 10px;
 	
 }
 #user-login, #pass-login{
